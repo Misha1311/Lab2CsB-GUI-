@@ -24,12 +24,12 @@ namespace Gui
             InitializeComponent();
         }
 
+       
         public void Start1_Click(object sender, EventArgs e)
         {
 
             N = Convert.ToInt32(OupN.Text);
             M = Convert.ToInt32(OupM.Text);
-
 
             double avgsqure = 0;
             double min = 0;
@@ -46,10 +46,11 @@ namespace Gui
                     tring[i].IsExists();
                     if (tring[i].exist == true)
                     {
-                        tring[i].Print();
                         tring[i].Angle();
                         tring[i].Perimetr();
                         tring[i].Square();
+                        // tring[i].Print();
+
                     }
                 } while (tring[i].exist == false);
 
@@ -58,14 +59,15 @@ namespace Gui
             }
             avgsqure /= N;
 
+
             for (int i = 0; i < N; i++)
             {
                 if (tring[i].perimetr < min)
                 {
                     min = tring[i].perimetr;
                 }
-
             }
+
             oupavsq.Text = avgsqure.ToString("n");
             oupminper.Text = min.ToString("n");
 
@@ -84,10 +86,10 @@ namespace Gui
                     {
                         if (all[i].isRight())
                         {
-                            all[i].Print();
                             all[i].Angle();
                             all[i].Perimetr();
                             all[i].Square();
+                            //all[i].Print();
                         }
                     }
                 } while (!all[i].isRight() || !all[i].exist);
@@ -101,7 +103,7 @@ namespace Gui
                     if (all[i].lenght[j] > max)
                     {
                         max = all[i].lenght[j];
-                        count++;
+                        count = i + 1;
                     }
                 }
             }

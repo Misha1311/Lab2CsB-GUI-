@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Gui
 {
+
     public struct Point2D
     {
         public int x;
@@ -12,12 +19,15 @@ namespace Gui
 
     class Triangle
     {
+        Form1 q = new Form1();
+
+
         int n = 3;
         Point2D[] points;
         public double[] lenght;
-        double angle1 = 0;
-        double angle2 = 0;
-        double angle3 = 0;
+        public double angle1 = 0;
+        public double angle2 = 0;
+        public double angle3 = 0;
         public double perimetr = 0;
         public double square = 0;
         public bool exist = true;
@@ -54,12 +64,21 @@ namespace Gui
         {
             for (int i = 0; i < points.Length; i++)
             {
-                Console.WriteLine($"X = {points[i].x} Y  = {points[i].y}");
+                MessageBox.Show("X = " + (points[i].x).ToString() + "Y  =" + (points[i].y).ToString());
+
             }
             for (int i = 0; i < points.Length; i++)
             {
-                Console.WriteLine($"Lenght {i + 1} : {lenght[i]}");
+                MessageBox.Show("Длина =  " + (i + 1) + (lenght[i]).ToString());
+
             }
+            MessageBox.Show("Угол 1 = " + (angle1).ToString());
+            MessageBox.Show("Угол 2 = " + (angle2).ToString());
+            MessageBox.Show("Угол 3 = " + (angle3).ToString());
+            MessageBox.Show("Периметр = " + (perimetr).ToString());
+            MessageBox.Show("Площадь = " + (square).ToString());
+
+
         }
 
         public void Lenght()
@@ -82,16 +101,13 @@ namespace Gui
             angle1 = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * 180 / Math.PI;
             angle2 = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * 180 / Math.PI;
             angle3 = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * 180 / Math.PI;
-            Console.WriteLine($"Angle 1 = {angle1}");
-            Console.WriteLine($"Angle 2 = {angle2}");
-            Console.WriteLine($"Angle 3 = {angle3}");
+
         }
 
         public void Perimetr()
         {
             perimetr = lenght[0] + lenght[1] + lenght[2];
 
-            Console.WriteLine("Perimetr = " + perimetr);
         }
 
         public void Square()
@@ -101,7 +117,6 @@ namespace Gui
             {
                 square *= -1;
             }
-            Console.WriteLine($"Square = {square}");
 
         }
     };

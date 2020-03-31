@@ -21,7 +21,6 @@ namespace Gui
                 {
                     result = true;
                 }
-
             }
             return result;
         }

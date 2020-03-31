@@ -49,22 +49,23 @@
             this.OupM.Name = "OupM";
             this.OupM.Size = new System.Drawing.Size(75, 25);
             this.OupM.TabIndex = 1;
+            this.OupM.Text = "0";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(5, 10);
+            this.label1.Location = new System.Drawing.Point(15, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(423, 24);
+            this.label1.Size = new System.Drawing.Size(386, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Введите количество четырехугольников:";
+            this.label1.Text = "Введите количество трехугольников:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(5, 50);
+            this.label2.Location = new System.Drawing.Point(15, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(478, 24);
             this.label2.TabIndex = 3;
@@ -102,33 +103,33 @@
             // 
             // oupavsq
             // 
-            this.oupavsq.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.oupavsq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.oupavsq.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.oupavsq.Location = new System.Drawing.Point(242, 300);
             this.oupavsq.Name = "oupavsq";
             this.oupavsq.Size = new System.Drawing.Size(141, 24);
             this.oupavsq.TabIndex = 9;
+            this.oupavsq.Text = "0";
             // 
             // oupminper
             // 
-            this.oupminper.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.oupminper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.oupminper.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.oupminper.Location = new System.Drawing.Point(297, 350);
             this.oupminper.Name = "oupminper";
             this.oupminper.Size = new System.Drawing.Size(141, 24);
             this.oupminper.TabIndex = 10;
+            this.oupminper.Text = "0";
             // 
             // oupmaxhyp
             // 
-            this.oupmaxhyp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.oupmaxhyp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.oupmaxhyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.oupmaxhyp.Location = new System.Drawing.Point(605, 400);
             this.oupmaxhyp.Name = "oupmaxhyp";
             this.oupmaxhyp.Size = new System.Drawing.Size(141, 24);
             this.oupmaxhyp.TabIndex = 11;
+            this.oupmaxhyp.Text = "0";
             // 
             // OupN
             // 
@@ -138,6 +139,7 @@
             this.OupN.Name = "OupN";
             this.OupN.Size = new System.Drawing.Size(75, 25);
             this.OupN.TabIndex = 12;
+            this.OupN.Text = "0";
             // 
             // Start1
             // 
