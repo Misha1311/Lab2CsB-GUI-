@@ -49,7 +49,7 @@ namespace Gui
                         tring[i].Angle();
                         tring[i].Perimetr();
                         tring[i].Square();
-                        // tring[i].Print();
+                        tring[i].Print();
 
                     }
                 } while (tring[i].exist == false);
@@ -89,7 +89,7 @@ namespace Gui
                             all[i].Angle();
                             all[i].Perimetr();
                             all[i].Square();
-                            //all[i].Print();
+                            all[i].Print();
                         }
                     }
                 } while (!all[i].isRight() || !all[i].exist);

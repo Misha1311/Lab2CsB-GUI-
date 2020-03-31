@@ -64,7 +64,7 @@ namespace Gui
         {
             for (int i = 0; i < points.Length; i++)
             {
-                MessageBox.Show("X = " + (points[i].x).ToString() + "Y  =" + (points[i].y).ToString());
+                MessageBox.Show("X = " + (points[i].x).ToString() + " Y  =" + (points[i].y).ToString());
 
             }
             for (int i = 0; i < points.Length; i++)
