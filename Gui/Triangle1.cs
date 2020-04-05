@@ -57,7 +57,6 @@ namespace Gui
             }
         }
 
-
         public string PrintData()
         {
             string data = "";
@@ -69,7 +68,7 @@ namespace Gui
 
             for (int i = 0; i < 3; i++)
             {
-                data += $"{i + 1} Длина = {lenght[i]:N1}\n";
+                data += $"Длина {i + 1}= {lenght[i]:N1}\n";
             }
             data += $"Угол 1 = {angle1:N1}\n";
             data += $"Угол 2 = {angle2:N1}\n";
@@ -77,7 +76,7 @@ namespace Gui
             data += $"Периметр = {perimetr:N1}\n";
             data += $"Площадь = {square:N1}\n";
 
-            data += $"------------------------------------------\n";
+            data += $"------------------------------------------\n\n";
 
             return data;
 

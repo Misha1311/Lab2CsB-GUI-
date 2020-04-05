@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.OupM = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +41,8 @@
             this.OupN = new System.Windows.Forms.TextBox();
             this.Start1 = new System.Windows.Forms.Button();
             this.info = new System.Windows.Forms.RichTextBox();
+            this.excp = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OupM
@@ -49,32 +52,34 @@
             this.OupM.Multiline = true;
             this.OupM.Name = "OupM";
             this.OupM.Size = new System.Drawing.Size(75, 25);
-            this.OupM.TabIndex = 1;
-            this.OupM.Text = "0";
+            this.OupM.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(15, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 24);
+            this.label1.Size = new System.Drawing.Size(375, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Введите количество трехугольников:";
+            this.label1.Text = "Введите количество треугольников:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(15, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(478, 24);
+            this.label2.Size = new System.Drawing.Size(484, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Введите номер прямоугольного треугольника:";
+            this.label2.Text = "Введите кол-во прямоугольных треугольников:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(15, 300);
             this.label3.Name = "label3";
@@ -85,6 +90,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(15, 350);
             this.label4.Name = "label4";
@@ -95,6 +101,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(15, 400);
             this.label5.Name = "label5";
@@ -104,9 +111,10 @@
             // 
             // AvgSqu
             // 
+            this.AvgSqu.BackColor = System.Drawing.Color.Transparent;
             this.AvgSqu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AvgSqu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AvgSqu.Location = new System.Drawing.Point(242, 300);
+            this.AvgSqu.Location = new System.Drawing.Point(235, 300);
             this.AvgSqu.Name = "AvgSqu";
             this.AvgSqu.Size = new System.Drawing.Size(141, 24);
             this.AvgSqu.TabIndex = 9;
@@ -114,6 +122,7 @@
             // 
             // MinPer
             // 
+            this.MinPer.BackColor = System.Drawing.Color.Transparent;
             this.MinPer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MinPer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MinPer.Location = new System.Drawing.Point(297, 350);
@@ -124,6 +133,7 @@
             // 
             // MaxHyp
             // 
+            this.MaxHyp.BackColor = System.Drawing.Color.Transparent;
             this.MaxHyp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MaxHyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MaxHyp.Location = new System.Drawing.Point(605, 400);
@@ -139,35 +149,66 @@
             this.OupN.Multiline = true;
             this.OupN.Name = "OupN";
             this.OupN.Size = new System.Drawing.Size(75, 25);
-            this.OupN.TabIndex = 12;
-            this.OupN.Text = "0";
+            this.OupN.TabIndex = 1;
             // 
             // Start1
             // 
+            this.Start1.BackColor = System.Drawing.Color.Transparent;
             this.Start1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Start1.FlatAppearance.BorderSize = 0;
+            this.Start1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Start1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Start1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Start1.Location = new System.Drawing.Point(611, 24);
             this.Start1.Name = "Start1";
             this.Start1.Size = new System.Drawing.Size(145, 38);
             this.Start1.TabIndex = 13;
             this.Start1.Text = "Посчитать";
-            this.Start1.UseVisualStyleBackColor = true;
+            this.Start1.UseVisualStyleBackColor = false;
             this.Start1.Click += new System.EventHandler(this.Start1_Click);
             // 
             // info
             // 
             this.info.Location = new System.Drawing.Point(19, 77);
             this.info.Name = "info";
+            this.info.ReadOnly = true;
             this.info.Size = new System.Drawing.Size(419, 220);
             this.info.TabIndex = 14;
             this.info.Text = "";
+            // 
+            // excp
+            // 
+            this.excp.AutoSize = true;
+            this.excp.BackColor = System.Drawing.Color.Transparent;
+            this.excp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.excp.Location = new System.Drawing.Point(499, 95);
+            this.excp.Name = "excp";
+            this.excp.Size = new System.Drawing.Size(0, 20);
+            this.excp.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Brown;
+            this.label6.Location = new System.Drawing.Point(772, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 24);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "X";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(140)))), ((int)(((byte)(178)))));
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.excp);
             this.Controls.Add(this.info);
             this.Controls.Add(this.Start1);
             this.Controls.Add(this.OupN);
@@ -181,8 +222,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.OupM);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,6 +244,8 @@
         private System.Windows.Forms.TextBox OupN;
         private System.Windows.Forms.Button Start1;
         public System.Windows.Forms.RichTextBox info;
+        private System.Windows.Forms.Label excp;
+        private System.Windows.Forms.Label label6;
     }
 }
 

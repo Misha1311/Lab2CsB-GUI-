@@ -24,102 +24,113 @@ namespace Gui
             InitializeComponent();
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         public void Start1_Click(object sender, EventArgs e)
         {
             info.Text = "";
+            excp.Text = "";
 
-            N = Convert.ToInt32(OupN.Text);
-            M = Convert.ToInt32(OupM.Text);
-
-            double avgsqure = 0;
-            double min = 0;
-
-            Triangle[] tring = new Triangle[N];
-
-
-            for (int i = 0; i < N; i++)
+            try
             {
-                do
+                N = Convert.ToInt32(OupN.Text);
+                M = Convert.ToInt32(OupM.Text);
+
+                double avgsqure = 0;
+                double min = 0;
+
+                Triangle[] tring = new Triangle[N];
+
+                for (int i = 0; i < N; i++)
                 {
-                    tring[i] = new Triangle();
-                    tring[i].Lenght();
-                    tring[i].IsExists();
-                    if (tring[i].exist == true)
+                    do
                     {
-                        tring[i].Angle();
-                        tring[i].Perimetr();
-                        tring[i].Square();
-                        //tring[i].Print(); 
-                    }
-                } while (tring[i].exist == false);
-
-                min = tring[0].perimetr;
-                avgsqure += tring[i].square;
-            }
-            avgsqure /= N;
-
-
-            for (int i = 0; i < N; i++)
-            {
-                if (tring[i].perimetr < min)
-                {
-                    min = tring[i].perimetr;
-                }
-            }
-
-            AvgSqu.Text = avgsqure.ToString("n");
-            MinPer.Text = min.ToString("n");
-
-            double max = 0;
-            RightTriangle[] all = new RightTriangle[M];
-
-            for (int i = 0; i < M; i++)
-            {
-                do
-                {
-                    all[i] = new RightTriangle();
-                    all[i].Lenght();
-                    all[i].IsExists();
-                    if (all[i].exist)
-                    {
-                        if (all[i].isRight())
+                        tring[i] = new Triangle();
+                        tring[i].Lenght();
+                        tring[i].IsExists();
+                        if (tring[i].exist == true)
                         {
-                            all[i].Angle();
-                            all[i].Perimetr();
-                            all[i].Square();
-                            //all[i].Print();
+                            tring[i].Angle();
+                            tring[i].Perimetr();
+                            tring[i].Square();
+                            //tring[i].Print(); 
+                        }
+                    } while (tring[i].exist == false);
+
+                    min = tring[0].perimetr;
+                    avgsqure += tring[i].square;
+                }
+                avgsqure /= N;
+
+
+                for (int i = 0; i < N; i++)
+                {
+                    if (tring[i].perimetr < min)
+                    {
+                        min = tring[i].perimetr;
+                    }
+                }
+
+                AvgSqu.Text = avgsqure.ToString("n");
+                MinPer.Text = min.ToString("n");
+
+                double max = 0;
+                RightTriangle[] all = new RightTriangle[M];
+
+                for (int i = 0; i < M; i++)
+                {
+                    do
+                    {
+                        all[i] = new RightTriangle();
+                        all[i].Lenght();
+                        all[i].IsExists();
+                        if (all[i].exist)
+                        {
+                            if (all[i].isRight())
+                            {
+                                all[i].Angle();
+                                all[i].Perimetr();
+                                all[i].Square();
+                                //all[i].Print();
+                            }
+                        }
+                    } while (!all[i].isRight() || !all[i].exist);
+                }
+
+
+                int count = 0;
+                for (int i = 0; i < M; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        if (all[i].lenght[j] > max)
+                        {
+                            max = all[i].lenght[j];
+                            count = i + 1;
                         }
                     }
-                } while (!all[i].isRight() || !all[i].exist);
-            }
+                }
+                MaxHyp.Text = count.ToString("n");
 
 
-            int count = 0;
-            for (int i = 0; i < M; i++)
-            {
-                for (int j = 0; j < 3; j++)
+                for (int i = 0; i < N; i++)
                 {
-                    if (all[i].lenght[j] > max)
-                    {
-                        max = all[i].lenght[j];
-                        count = i + 1;
-                    }
+                    info.Text += $"Треугольник #{i + 1}\n";
+                    info.Text += tring[i].PrintData();
+                }
+
+                for (int i = 0; i < M; i++)
+                {
+                    info.Text += $"Прямоугольный треугольник #{i + 1}\n";
+                    info.Text += all[i].PrintData();
                 }
             }
-            MaxHyp.Text = count.ToString("n");
-
-            
-            for (int i = 0; i < N; i++)
+            catch (Exception exc)
             {
-                info.Text += $"Треугольник #{i+1}\n";
-                info.Text += tring[i].PrintData();
-            }
-
-            for (int i = 0; i < M; i++)
-            {
-                info.Text += $"Прямоугольный треугольник #{i + 1}\n";
-                info.Text += all[i].PrintData();
+                excp.Text = "Неверно заданый формат.\nВведите число.";
             }
         }
     }
