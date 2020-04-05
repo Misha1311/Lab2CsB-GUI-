@@ -34,11 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.oupavsq = new System.Windows.Forms.Label();
-            this.oupminper = new System.Windows.Forms.Label();
-            this.oupmaxhyp = new System.Windows.Forms.Label();
+            this.AvgSqu = new System.Windows.Forms.Label();
+            this.MinPer = new System.Windows.Forms.Label();
+            this.MaxHyp = new System.Windows.Forms.Label();
             this.OupN = new System.Windows.Forms.TextBox();
             this.Start1 = new System.Windows.Forms.Button();
+            this.info = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // OupM
@@ -101,35 +102,35 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Прямоуголный треугольник с наибольшей гипотенузой = ";
             // 
-            // oupavsq
+            // AvgSqu
             // 
-            this.oupavsq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.oupavsq.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.oupavsq.Location = new System.Drawing.Point(242, 300);
-            this.oupavsq.Name = "oupavsq";
-            this.oupavsq.Size = new System.Drawing.Size(141, 24);
-            this.oupavsq.TabIndex = 9;
-            this.oupavsq.Text = "0";
+            this.AvgSqu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AvgSqu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AvgSqu.Location = new System.Drawing.Point(242, 300);
+            this.AvgSqu.Name = "AvgSqu";
+            this.AvgSqu.Size = new System.Drawing.Size(141, 24);
+            this.AvgSqu.TabIndex = 9;
+            this.AvgSqu.Text = "0";
             // 
-            // oupminper
+            // MinPer
             // 
-            this.oupminper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.oupminper.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.oupminper.Location = new System.Drawing.Point(297, 350);
-            this.oupminper.Name = "oupminper";
-            this.oupminper.Size = new System.Drawing.Size(141, 24);
-            this.oupminper.TabIndex = 10;
-            this.oupminper.Text = "0";
+            this.MinPer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinPer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MinPer.Location = new System.Drawing.Point(297, 350);
+            this.MinPer.Name = "MinPer";
+            this.MinPer.Size = new System.Drawing.Size(141, 24);
+            this.MinPer.TabIndex = 10;
+            this.MinPer.Text = "0";
             // 
-            // oupmaxhyp
+            // MaxHyp
             // 
-            this.oupmaxhyp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.oupmaxhyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.oupmaxhyp.Location = new System.Drawing.Point(605, 400);
-            this.oupmaxhyp.Name = "oupmaxhyp";
-            this.oupmaxhyp.Size = new System.Drawing.Size(141, 24);
-            this.oupmaxhyp.TabIndex = 11;
-            this.oupmaxhyp.Text = "0";
+            this.MaxHyp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaxHyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MaxHyp.Location = new System.Drawing.Point(605, 400);
+            this.MaxHyp.Name = "MaxHyp";
+            this.MaxHyp.Size = new System.Drawing.Size(141, 24);
+            this.MaxHyp.TabIndex = 11;
+            this.MaxHyp.Text = "0";
             // 
             // OupN
             // 
@@ -153,17 +154,26 @@
             this.Start1.UseVisualStyleBackColor = true;
             this.Start1.Click += new System.EventHandler(this.Start1_Click);
             // 
+            // info
+            // 
+            this.info.Location = new System.Drawing.Point(19, 77);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(419, 220);
+            this.info.TabIndex = 14;
+            this.info.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(140)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.info);
             this.Controls.Add(this.Start1);
             this.Controls.Add(this.OupN);
-            this.Controls.Add(this.oupmaxhyp);
-            this.Controls.Add(this.oupminper);
-            this.Controls.Add(this.oupavsq);
+            this.Controls.Add(this.MaxHyp);
+            this.Controls.Add(this.MinPer);
+            this.Controls.Add(this.AvgSqu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -186,11 +196,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label oupavsq;
-        private System.Windows.Forms.Label oupminper;
-        private System.Windows.Forms.Label oupmaxhyp;
+        private System.Windows.Forms.Label AvgSqu;
+        private System.Windows.Forms.Label MinPer;
+        private System.Windows.Forms.Label MaxHyp;
         private System.Windows.Forms.TextBox OupN;
         private System.Windows.Forms.Button Start1;
+        public System.Windows.Forms.RichTextBox info;
     }
 }
 

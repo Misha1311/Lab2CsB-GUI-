@@ -13,7 +13,7 @@ namespace Gui
     public partial class Form1 : Form
     {
 
-        public int n, m;
+        int n, m;
 
         public int N { get => n; set => n = value; }
         public int M { get => m; set => m = value; }
@@ -24,9 +24,10 @@ namespace Gui
             InitializeComponent();
         }
 
-       
+
         public void Start1_Click(object sender, EventArgs e)
         {
+            info.Text = "";
 
             N = Convert.ToInt32(OupN.Text);
             M = Convert.ToInt32(OupM.Text);
@@ -49,8 +50,7 @@ namespace Gui
                         tring[i].Angle();
                         tring[i].Perimetr();
                         tring[i].Square();
-                        tring[i].Print();
-
+                        //tring[i].Print(); 
                     }
                 } while (tring[i].exist == false);
 
@@ -68,11 +68,10 @@ namespace Gui
                 }
             }
 
-            oupavsq.Text = avgsqure.ToString("n");
-            oupminper.Text = min.ToString("n");
+            AvgSqu.Text = avgsqure.ToString("n");
+            MinPer.Text = min.ToString("n");
 
             double max = 0;
-
             RightTriangle[] all = new RightTriangle[M];
 
             for (int i = 0; i < M; i++)
@@ -89,12 +88,13 @@ namespace Gui
                             all[i].Angle();
                             all[i].Perimetr();
                             all[i].Square();
-                            all[i].Print();
+                            //all[i].Print();
                         }
                     }
                 } while (!all[i].isRight() || !all[i].exist);
-
             }
+
+
             int count = 0;
             for (int i = 0; i < M; i++)
             {
@@ -107,7 +107,20 @@ namespace Gui
                     }
                 }
             }
-            oupmaxhyp.Text = count.ToString("n");
+            MaxHyp.Text = count.ToString("n");
+
+            
+            for (int i = 0; i < N; i++)
+            {
+                info.Text += $"Треугольник #{i+1}\n";
+                info.Text += tring[i].PrintData();
+            }
+
+            for (int i = 0; i < M; i++)
+            {
+                info.Text += $"Прямоугольный треугольник #{i + 1}\n";
+                info.Text += all[i].PrintData();
+            }
         }
     }
 }

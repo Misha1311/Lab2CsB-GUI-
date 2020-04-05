@@ -19,9 +19,7 @@ namespace Gui
 
     class Triangle
     {
-        Form1 q = new Form1();
-
-
+        static int f = 0;
         int n = 3;
         Point2D[] points;
         public double[] lenght;
@@ -31,7 +29,7 @@ namespace Gui
         public double perimetr = 0;
         public double square = 0;
         public bool exist = true;
-        Random rand = new Random();
+        Random rand = new Random(f++);
 
         public double a;
         public double b;
@@ -56,27 +54,51 @@ namespace Gui
                     exist = false;
                     break;
                 }
-
             }
         }
+
+
+        public string PrintData()
+        {
+            string data = "";
+
+            for (int i = 0; i < 3; i++)
+            {
+                data += $"X = { points[i].x }\t Y = { points[i].y }\n";
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                data += $"{i + 1} Длина = {lenght[i]:N1}\n";
+            }
+            data += $"Угол 1 = {angle1:N1}\n";
+            data += $"Угол 2 = {angle2:N1}\n";
+            data += $"Угол 3 = {angle3:N1}\n";
+            data += $"Периметр = {perimetr:N1}\n";
+            data += $"Площадь = {square:N1}\n";
+
+            data += $"------------------------------------------\n";
+
+            return data;
+
+        }
+
 
         public void Print()
         {
             for (int i = 0; i < points.Length; i++)
             {
                 MessageBox.Show("X = " + (points[i].x).ToString() + " Y  =" + (points[i].y).ToString());
-
             }
             for (int i = 0; i < points.Length; i++)
             {
                 MessageBox.Show("Длина =  " + (i + 1) + (lenght[i]).ToString());
-
             }
-            MessageBox.Show("Угол 1 = " + (angle1).ToString());
-            MessageBox.Show("Угол 2 = " + (angle2).ToString());
-            MessageBox.Show("Угол 3 = " + (angle3).ToString());
-            MessageBox.Show("Периметр = " + (perimetr).ToString());
-            MessageBox.Show("Площадь = " + (square).ToString());
+            MessageBox.Show("Угол 1 = " + (angle1).ToString() + "\n" + "Угол 2 = " + (angle2).ToString() + "\n" + "Угол 3 = " + (angle3).ToString() + "\n" + "Периметр = " + (perimetr).ToString() + "\n" + "Площадь = " + (square).ToString());
+            //MessageBox.Show("Угол 2 = " + (angle2).ToString());
+            //MessageBox.Show("Угол 3 = " + (angle3).ToString());
+            //MessageBox.Show("Периметр = " + (perimetr).ToString());
+            //MessageBox.Show("Площадь = " + (square).ToString());
 
 
         }
