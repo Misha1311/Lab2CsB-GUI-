@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.OupM = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,21 +37,13 @@
             this.AvgSqu = new System.Windows.Forms.Label();
             this.MinPer = new System.Windows.Forms.Label();
             this.MaxHyp = new System.Windows.Forms.Label();
-            this.OupN = new System.Windows.Forms.TextBox();
             this.Start1 = new System.Windows.Forms.Button();
             this.info = new System.Windows.Forms.RichTextBox();
             this.excp = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.OupN = new System.Windows.Forms.TextBox();
+            this.OupM = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // OupM
-            // 
-            this.OupM.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OupM.Location = new System.Drawing.Point(500, 50);
-            this.OupM.Multiline = true;
-            this.OupM.Name = "OupM";
-            this.OupM.Size = new System.Drawing.Size(75, 25);
-            this.OupM.TabIndex = 2;
             // 
             // label1
             // 
@@ -142,15 +133,6 @@
             this.MaxHyp.TabIndex = 11;
             this.MaxHyp.Text = "0";
             // 
-            // OupN
-            // 
-            this.OupN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OupN.Location = new System.Drawing.Point(500, 10);
-            this.OupN.Multiline = true;
-            this.OupN.Name = "OupN";
-            this.OupN.Size = new System.Drawing.Size(75, 25);
-            this.OupN.TabIndex = 1;
-            // 
             // Start1
             // 
             this.Start1.BackColor = System.Drawing.Color.Transparent;
@@ -200,6 +182,22 @@
             this.label6.Text = "X";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // OupN
+            // 
+            this.OupN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OupN.Location = new System.Drawing.Point(500, 10);
+            this.OupN.Name = "OupN";
+            this.OupN.Size = new System.Drawing.Size(75, 29);
+            this.OupN.TabIndex = 17;
+            // 
+            // OupM
+            // 
+            this.OupM.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OupM.Location = new System.Drawing.Point(500, 50);
+            this.OupM.Name = "OupM";
+            this.OupM.Size = new System.Drawing.Size(75, 29);
+            this.OupM.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,11 +205,12 @@
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.OupM);
+            this.Controls.Add(this.OupN);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.excp);
             this.Controls.Add(this.info);
             this.Controls.Add(this.Start1);
-            this.Controls.Add(this.OupN);
             this.Controls.Add(this.MaxHyp);
             this.Controls.Add(this.MinPer);
             this.Controls.Add(this.AvgSqu);
@@ -220,7 +219,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.OupM);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -232,7 +230,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox OupM;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -241,11 +238,12 @@
         private System.Windows.Forms.Label AvgSqu;
         private System.Windows.Forms.Label MinPer;
         private System.Windows.Forms.Label MaxHyp;
-        private System.Windows.Forms.TextBox OupN;
         private System.Windows.Forms.Button Start1;
         public System.Windows.Forms.RichTextBox info;
         private System.Windows.Forms.Label excp;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox OupN;
+        private System.Windows.Forms.TextBox OupM;
     }
 }
 

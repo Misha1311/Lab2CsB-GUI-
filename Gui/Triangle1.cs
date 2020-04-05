@@ -36,7 +36,6 @@ namespace Gui
         public double c;
         public Triangle()
         {
-
             points = new Point2D[3];
             for (int i = 0; i < points.Length; i++)
             {
