@@ -24,10 +24,6 @@ namespace Gui
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         public void Start1_Click(object sender, EventArgs e)
         {
@@ -56,7 +52,6 @@ namespace Gui
                             tring[i].Angle();
                             tring[i].Perimetr();
                             tring[i].Square();
-                            //tring[i].Print(); 
                         }
                     } while (tring[i].exist == false);
 
@@ -74,8 +69,8 @@ namespace Gui
                     }
                 }
 
-                AvgSqu.Text = avgsqure.ToString("n");
-                MinPer.Text = min.ToString("n");
+                AvgSqu.Text = avgsqure.ToString("n1");
+                MinPer.Text = min.ToString("n1");
 
                 double max = 0;
                 RightTriangle[] all = new RightTriangle[M];
@@ -94,7 +89,6 @@ namespace Gui
                                 all[i].Angle();
                                 all[i].Perimetr();
                                 all[i].Square();
-                                //all[i].Print();
                             }
                         }
                     } while (!all[i].isRight() || !all[i].exist);
@@ -113,7 +107,7 @@ namespace Gui
                         }
                     }
                 }
-                MaxHyp.Text = count.ToString("n");
+                MaxHyp.Text = count.ToString("n0");
 
 
                 for (int i = 0; i < N; i++)

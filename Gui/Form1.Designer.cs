@@ -40,7 +40,6 @@
             this.Start1 = new System.Windows.Forms.Button();
             this.info = new System.Windows.Forms.RichTextBox();
             this.excp = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.OupN = new System.Windows.Forms.TextBox();
             this.OupM = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -144,7 +143,7 @@
             this.Start1.Location = new System.Drawing.Point(611, 24);
             this.Start1.Name = "Start1";
             this.Start1.Size = new System.Drawing.Size(145, 38);
-            this.Start1.TabIndex = 13;
+            this.Start1.TabIndex = 3;
             this.Start1.Text = "Посчитать";
             this.Start1.UseVisualStyleBackColor = false;
             this.Start1.Click += new System.EventHandler(this.Start1_Click);
@@ -155,7 +154,7 @@
             this.info.Name = "info";
             this.info.ReadOnly = true;
             this.info.Size = new System.Drawing.Size(419, 220);
-            this.info.TabIndex = 14;
+            this.info.TabIndex = 5;
             this.info.Text = "";
             // 
             // excp
@@ -168,27 +167,13 @@
             this.excp.Size = new System.Drawing.Size(0, 20);
             this.excp.TabIndex = 15;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Brown;
-            this.label6.Location = new System.Drawing.Point(772, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 24);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "X";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // OupN
             // 
             this.OupN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OupN.Location = new System.Drawing.Point(500, 10);
             this.OupN.Name = "OupN";
             this.OupN.Size = new System.Drawing.Size(75, 29);
-            this.OupN.TabIndex = 17;
+            this.OupN.TabIndex = 1;
             // 
             // OupM
             // 
@@ -196,7 +181,7 @@
             this.OupM.Location = new System.Drawing.Point(500, 50);
             this.OupM.Name = "OupM";
             this.OupM.Size = new System.Drawing.Size(75, 29);
-            this.OupM.TabIndex = 18;
+            this.OupM.TabIndex = 2;
             // 
             // Form1
             // 
@@ -207,7 +192,6 @@
             this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.OupM);
             this.Controls.Add(this.OupN);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.excp);
             this.Controls.Add(this.info);
             this.Controls.Add(this.Start1);
@@ -220,10 +204,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Triangle";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +226,6 @@
         private System.Windows.Forms.Button Start1;
         public System.Windows.Forms.RichTextBox info;
         private System.Windows.Forms.Label excp;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox OupN;
         private System.Windows.Forms.TextBox OupM;
     }
